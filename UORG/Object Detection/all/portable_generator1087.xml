@@ -1,0 +1,38 @@
+<annotation>
+	<folder>dataset</folder>
+	<filename>portable_generator1087.png</filename>
+	<path>D:\GitHub\Meturone\Meturone\UORG\Object Detection\dataset\portable_generator1087.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>portable_generator</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>43</xmin>
+			<ymin>153</ymin>
+			<xmax>240</xmax>
+			<ymax>505</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>portable_generator</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>288</xmin>
+			<ymin>178</ymin>
+			<xmax>509</xmax>
+			<ymax>503</ymax>
+		</bndbox>
+	</object>
+</annotation>

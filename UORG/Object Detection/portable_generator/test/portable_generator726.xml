@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>portable_generator726.jpg</filename>
+	<path>D:\GitHub\Meturone\Meturone\UORG\Object Detection\portable_generator\test\portable_generator726.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>512</width>
+		<height>512</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>portable_generator</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>136</xmin>
+			<ymin>80</ymin>
+			<xmax>443</xmax>
+			<ymax>454</ymax>
+		</bndbox>
+	</object>
+</annotation>

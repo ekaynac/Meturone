@@ -6,13 +6,7 @@ import os
 
 INPUT_IMAGE_URL = "https://cdn.protoolreviews.com/wp-content/uploads/2018/05/Best-Portable-Generator-Buying-Guide-01.jpg" 
 DETECTION_THRESHOLD = 0.18 
-TFLITE_MODEL_PATH = r"D:\Github\Meturone\UORG\Object Detection\Model\efficientdet_lite0-portablegenerator-augmented.tflite" 
-
-IMG_PATH = r'D:\Github\Meturone\UORG\Object Detection\portable_generator\test\portable_generator5.jpg'
-
-image = Image.open(IMG_PATH).convert('RGB')
-image.thumbnail((512, 512), Image.ANTIALIAS)
-image_np = np.asarray(image)
+TFLITE_MODEL_PATH = r"D:\GitHub\Meturone\Meturone\UORG\Object Detection\Model\efficientdet_lite0-portablegenerator-augmented.tflite" 
 
 # Load the TFLite model
 options = ObjectDetectorOptions(
@@ -22,7 +16,7 @@ options = ObjectDetectorOptions(
 )
 detector = ObjectDetector(model_path=TFLITE_MODEL_PATH, options=options)
 
-PATH = r"D:\Github\Meturone\UORG\Object Detection\data06\data06"
+PATH = r"D:\GitHub\Meturone\Meturone\UORG\Object Detection\deneme_datasi"
 
 for i in os.listdir(PATH):
     img_path = os.path.join(PATH,i)

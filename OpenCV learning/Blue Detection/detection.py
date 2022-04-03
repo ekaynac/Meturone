@@ -242,10 +242,6 @@ class Detector:
                     frame_contoured, frame_hsv, mask, xs, ys = Detector.findContours(frame, l_bound=l_bound, u_bound=u_bound, filter_type="hsv")
                     if line:
                         frame_contoured_lined = self.drawLine(frame_contoured,xs,ys)
-                    cv.imshow("frame", frame)
-                    cv.imshow("mask",mask)
-                    cv.imshow("frame_hsv",frame_hsv)
-                    cv.imshow("frame_contoured",frame_contoured)
                     cv.imshow("frame_contoured_lined",frame_contoured_lined)
                 else:
                     cap.set(cv.CAP_PROP_POS_FRAMES, 0)

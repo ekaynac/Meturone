@@ -1,15 +1,18 @@
 import cv2 as cv
 
 class Distance:
-    def __init__(self,height,focal_lenght,src=0):
+    def __init__(self,height,src=0):
         self.distance_px=0 # as px
         self.distance=0 # as m
-        self.focal_lenght=focal_lenght # as mm
         self.height=height # as m
         self.angle=0 # as degree
+        self.cap = cv.VideoCapture(src)
+        self.focal_lenght=3.04 # as mm
         self.width_px=640 # as px
         self.height_px=480 # as px
-        self.cap = cv.VideoCapture(src)
+        self.x_fow_degree = 62.2 # as degree (camera module 2)
+        self.y_fow_degree = 48.8
+        self.
 
     @staticmethod
     def distance_px_from_contours(self,x_min,y_min,x_max,y_max):
@@ -32,5 +35,5 @@ class Distance:
                 break
 
 if __name__ == "__main__":
-    x = Distance(10,10)
+    x = Distance(10)
     x.main()

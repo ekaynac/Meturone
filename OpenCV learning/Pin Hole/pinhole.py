@@ -104,13 +104,37 @@ class Distance:
     def calibration(self):
         cv.namedWindow('calibrate')
         cv.createTrackbar('region','calibrate',1,4,self.nothing)
-        for i in range(1,5):
-            if i == 1:
-                region1 = np.zeros((640,480))
-                region1[int(self.width_px*3/4)][int(self.height_px*3/4)]=1
-                cv.imshow("sexc",region1)
-                self.region1 = cv.getTrackbarPos('region','calibrate')
+        i = 1
+        if i == 1:
+            region = np.zeros((640,480))
+            region[int(self.width_px*3/4)][int(self.height_px*3/4)]=1
+            cv.imshow("sexc",region)
+            self.region1 = cv.getTrackbarPos('region','calibrate')
+            if cv.waitKey(10) == ord("n"):
+                i += 1
+        if i == 2:
+            region = np.zeros((640,480))
+            region[int(self.width_px*1/4)][int(self.height_px*3/4)]=1
+            cv.imshow("sexc",region)
+            self.region2 = cv.getTrackbarPos('region','calibrate')
+            if cv.waitKey(10) == ord("n"):
+                i += 1
+        if i == 3:
+            region = np.zeros((640,480))
+            region[int(self.width_px*1/4)][int(self.height_px*1/4)]=1
+            cv.imshow("sexc",region)
+            self.region3 = cv.getTrackbarPos('region','calibrate')
+            if cv.waitKey(10) == ord("n"):
+                i += 1
+        if i == 4:
+            region = np.zeros((640,480))
+            region[int(self.width_px*3/4)][int(self.height_px*1/4)]=1
+            cv.imshow("sexc",region)
+            self.region4 = cv.getTrackbarPos('region','calibrate')
+            if cv.waitKey(10) == ord("n"):
+                i += 1
 
+            
 
     # self.height, self.x_angle_theta, self.y_angle_theta should be updated for each frame, these values will be taken from pixhawk
     def main(self):
@@ -123,7 +147,7 @@ class Distance:
                 self.distance_px_from_contours_update(480,480,360,360)
                 self.find_region_update()
                 self.real_distance_find_update()
-                print(self.real_distance_on_x, self.real_distance_on_y)
+                #print(self.real_distance_on_x, self.real_distance_on_y)
                 cv.imshow("sex",frame)
             if cv.waitKey(10) == ord("q"):
                 break
